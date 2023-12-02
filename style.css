@@ -76,7 +76,8 @@ main div{
 }
 
 .card{
-    height: 25vh;
+    min-height: 275px;
+    max-height:30vh;
     background-color: var(--light-text);
     border-radius:10px;
     font-size:18px;
@@ -95,14 +96,23 @@ main div{
 
 .card ul{
     height: 75%;
+    width:100%;
+    padding:10px;
     list-style: none;
+
     display:grid;
     grid-template-rows: repeat(5,1fr) ; 
+    gap:10px;
     align-items: center;
     justify-items: center;
 }
 
-
+.remove-button,
+.button-read,
+.button-not-read{
+    display:block;
+    width:100%;
+}
 
 footer{
     background-color: var(--background-low);
