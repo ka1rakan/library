@@ -29,7 +29,7 @@ body{
 
 header{
     grid-area: header;
-    background-color: #f8fafc;
+    background-color: var(--light-text);
     padding: 0 20vw 0 20vw; 
 
     display:flex;
@@ -42,18 +42,6 @@ header p{
     font-size: 32px;
     
     margin:0;
-}
-
-#log-in-btn{
-    height: 45px;
-    background-color: var(--background-low);
-    color: var(--main-text);
-    transition: color .3s, background-color .3s;
-}
-
-#log-in-btn:hover{
-    background-color: var(--background-high);
-    color: var(--light-text);
 }
 
 main{
@@ -88,18 +76,15 @@ main div{
 }
 
 .card{
-    height: 20vh;
+    height: 25vh;
     background-color: var(--light-text);
     border-radius:10px;
     font-size:18px;
 
-    display:grid;
-    grid-template-rows: repeat(4,1fr) ;
-    gap:30px;
-    align-items: center;
-    justify-items: center;
-
     transition: box-shadow .1s ease-in-out;
+
+    display:flex;
+    align-items: center;
 }
 
 .card:hover{
@@ -109,9 +94,10 @@ main div{
 }
 
 .card ul{
+    height: 75%;
     list-style: none;
     display:grid;
-    grid-template-rows: repeat(4,1fr) ;
+    grid-template-rows: repeat(5,1fr) ; 
     align-items: center;
     justify-items: center;
 }
