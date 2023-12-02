@@ -20,23 +20,20 @@
         <dialog class="modal">
             <form>
                 <div class="form-row">
-                    <label for="title">Title: </label>
-                    <input id="title" type="text" required autofocus>
+                    <input id="title" type="text" placeholder="Title" required autofocus>
                 </div>
                 <div class="form-row">
-                    <label for="author">Author: </label>
-                    <input id="author" type="text" required>
+                    <input id="author" type="text" placeholder="Author" required>
                 </div>
                 <div class="form-row">
-                    <label for="pages">Pages: </label>
-                    <input id="pages" type="number" required>
+                    <input id="pages" type="number" placeholder="Pages" required>
                 </div>
                 <div class="form-row-cb">
                     <label for="read">Have you read it?</label>
                     <input id="read" type="checkbox">
                 </div>
                 <div class="form-row-btn">
-                    <button value="default" formmethod="dialog" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    <button id="confirm-dialog" value="default" formmethod="dialog" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                         Add Book
                       </button>
                       <button value="cancel" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
