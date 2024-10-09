@@ -1,3 +1,6 @@
+const addBookBtn = document.querySelector('.addBook');
+const container = document.querySelector('.container')
+
 const library = [];
 let maxId = 0;
 
@@ -22,3 +25,10 @@ function toggleBookRead(id) {
   const book = library.find(book => book.id === id);
   book.read = !book.read;
 }
+
+addBookBtn.addEventListener('click', () => {
+  const book1 = new Book('test', 'testAuth', 100, true);
+  const node = document.createElement('div');
+  node.innerText = book1.title;
+  container.appendChild(node)
+})
