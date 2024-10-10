@@ -27,19 +27,28 @@ function addBookCard(book) {
   card.classList = ['card'];
   const title = document.createElement('h2');
   title.classList = ['title'];
-  title.innerText = book.title;
+  title.innerText = `"${book.title}"`;
   const ul = document.createElement('ul');
   const li1 = document.createElement('li');
-  li1.innerText = `author: ${book.author}`;
+  li1.innerText = book.author;
   ul.appendChild(li1);
   const li2 = document.createElement('li');
-  li2.innerText = `pages: ${book.pages}`;
+  li2.innerText = book.pages;
   ul.appendChild(li2);
   const li3 = document.createElement('li');
   li3.innerText = book.read;
   ul.appendChild(li3);
+  const removeButton = document.createElement('button')
+  removeButton.textContent = 'Remove'
+  removeButton.classList = ['remove-btn']
+  removeButton.addEventListener('click', () => {
+    container.removeChild(card);
+    removeBookFromLibrary(book.id);
+  })
+
   card.appendChild(title);
   card.appendChild(ul);
+  card.appendChild(removeButton);
   container.appendChild(card);
 }
 
