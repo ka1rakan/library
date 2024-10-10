@@ -52,3 +52,14 @@ main button {
   font-size: 1.5rem;
   width: 32px;
 }
+
+.card {
+  padding: 24px;
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  justify-items: center;
+}
+
+.card ul {
+  list-style: none;
+}
