@@ -35,9 +35,14 @@ function addBookCard(book) {
   const li2 = document.createElement('li');
   li2.innerText = book.pages;
   ul.appendChild(li2);
-  const li3 = document.createElement('li');
-  li3.innerText = book.read;
-  ul.appendChild(li3);
+  const read = document.createElement('input');
+  read.type = "checkbox";
+  read.checked = book.read ? true : false; 
+  read.addEventListener('click', () => {
+    book.read = !book.read
+  })
+
+  ul.appendChild(read);
   const removeButton = document.createElement('button')
   removeButton.textContent = 'Remove'
   removeButton.classList = ['remove-btn']
