@@ -63,3 +63,43 @@ main button {
 .card ul {
   list-style: none;
 }
+
+dialog[open] {
+  height: 300px;
+  padding: 24px;
+  justify-self: center;
+  align-self: center;
+}
+
+dialog[open] form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+dialog[open] input,
+dialog[open] label {
+  font-size: 1.2rem;
+}
+
+.dialog-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+dialog[open] input[type="text"],
+dialog[open] input[type="number"] {
+  width: 70%;
+}
+
+.checkbox-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-wrapper button {
+  font-size: 1rem;
+  width: 100px;
+  padding: 5px;
+}
